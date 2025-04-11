@@ -10,10 +10,17 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  color: hsl(234, 29%, 20%);
+  font-size: clamp(11.52px, 4vw, 16px);
+  line-height: 150%;
+  font-weight: 400;
 }
 
 article {
   padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 button {
@@ -23,4 +30,70 @@ button {
   border-radius: 8px;
   border: none;
   color: hsl(0, 100%, 100%);
+  font-size: clamp(8.64px, 4vw, 12px);
+  line-height: 150%;
+  font-weight: 700;
+}
+button:hover {
+  background: linear-gradient(hsl(12, 100%, 61%), hsl(346, 100%, 66%));
+}
+
+h1 {
+  font-size: clamp(40.32px, 4vw, 56px);
+  line-height: 100%;
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 24px;
+}
+ul li {
+  padding-left: 27px;
+}
+ul li::marker {
+  content: url("./assets/images/icon-list.svg");
+}
+
+form {
+  display: grid;
+  grid-template-areas: "label error" "input input" "button button";
+}
+form input {
+  padding: 16px 24px;
+  border: 1px solid hsl(0, 0%, 58%);
+  border-radius: 8px;
+  grid-area: input;
+  color: hsl(0, 0%, 58%);
+}
+form label {
+  grid-area: label;
+  justify-self: first baseline;
+  font-size: clamp(8.64px, 4vw, 12px);
+  line-height: 150%;
+  font-weight: 700;
+}
+form button {
+  grid-area: button;
+  margin-top: 24px;
+}
+form #email-error {
+  grid-area: error;
+}
+
+#success-check {
+  height: 64px;
+  width: 64px;
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(4, 100%, 67%);
 }/*# sourceMappingURL=styles.css.map */

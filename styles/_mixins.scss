@@ -1,5 +1,8 @@
-@mixin text-style($size: $spacing-200, $line-height: 100%, $font-weight: 700) {
-    font-size: $size;
+@use "sass:math";
+@use "variables" as *;
+
+@mixin text-style($size: $spacing-200, $line-height: 150%, $font-weight: 700) {
+    font-size: clamp(calc($size*0.72), 4vw, $size);
     line-height: $line-height;
     font-weight: $font-weight;
 }

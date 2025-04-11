@@ -9,11 +9,6 @@
     
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
   </head>
   <body>
 
@@ -39,10 +34,10 @@
         </ul>
   
         <form id="form" novalidate>
+          <span aria-live="polite" id="email-error"></span>
           <label for="email">Email address</label>
           <input id="email" name="email" type="email" value="email@company.com" />
-          <span aria-live="polite" id="email-error"></span>
-  
+          
           <button>Subscribe to monthly newsletter</button>
         </form>
 
@@ -51,10 +46,13 @@
       </article>
 
       <!-- Success message start -->
-      <article id="article__success-message">
+      <article id="article__success-message" class="hidden">
+
+        <img id="success-check" src="./assets/images/icon-success.svg" />
+
         <h1>Thanks for subscribing!</h1>
 
-        <p>A confirmation email has been sent to ash@loremcompany.com. 
+        <p>A confirmation email has been sent to <span id="captured-email">ash@loremcompany.com</span>.
         Please open it and click the button inside to confirm your subscription.</p>
   
         <button>Dismiss message</button>
@@ -66,7 +64,7 @@
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/curricle">S. Jordan</a>.
     </div>
   </body>
 </html>
