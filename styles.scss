@@ -1,5 +1,5 @@
-@use "mixins";
-@use "variables";
+@use "./styles/mixins" as *;
+@use "./styles/variables" as *;
 
 @font-face {
     font-family: "Roboto";
@@ -14,4 +14,18 @@
 
 body {
     font-family: "Roboto", sans-serif;
+}
+
+article {
+    padding: $spacing-600 $spacing-300;
+}
+
+button {
+    width: 100%;
+    padding: $spacing-200 $spacing-600;
+    background-color: $blue-800;
+    border-radius: $spacing-100;
+    border: none;
+    color: $white;
+    @use text-style(12px, $line-height: 150%);
 }

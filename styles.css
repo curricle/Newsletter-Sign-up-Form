@@ -10,4 +10,17 @@
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+article {
+  padding: 48px 24px;
+}
+
+button {
+  width: 100%;
+  padding: 16px 48px;
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 8px;
+  border: none;
+  color: hsl(0, 100%, 100%);
 }/*# sourceMappingURL=styles.css.map */

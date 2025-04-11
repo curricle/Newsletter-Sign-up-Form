@@ -19,45 +19,49 @@
 
     <!-- Sign-up form start -->
     <main>
-      <header>
-        <picture>
-          <source media="(min-width: 376px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
-          <source media="(max-width: 375px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
-          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign-up illustration"/>
-        </picture>
-        <h1>Stay updated!</h1>
-      </header>
+      <picture>
+        <source media="(min-width: 376px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <source media="(max-width: 375px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign-up illustration"/>
+      </picture>
+
+      <article id="article__form">
+        <header>
+          <h1>Stay updated!</h1>
+        </header>
       
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+  
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+  
+        <form id="form" novalidate>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" value="email@company.com" />
+          <span aria-live="polite" id="email-error"></span>
+  
+          <button>Subscribe to monthly newsletter</button>
+        </form>
 
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <!-- Sign-up form end -->
 
-      <ul>
-        <li>Product discovery and building what matters</li>
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
-      </ul>
-
-      <form id="form" novalidate>
-        <label for="email">Email address</label>
-        <input id="email" name="email" type="email" value="email@company.com" />
-        <span aria-live="polite" id="email-error"></span>
-
-        <button>Subscribe to monthly newsletter</button>
-      </form>
-      
-
-      <!-- Sign-up form end -->
+      </article>
 
       <!-- Success message start -->
+      <article id="article__success-message">
+        <h1>Thanks for subscribing!</h1>
 
-      <h1>Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to ash@loremcompany.com. 
+        Please open it and click the button inside to confirm your subscription.</p>
+  
+        <button>Dismiss message</button>
+      
+        <!-- Success message end -->
 
-      <p>A confirmation email has been sent to ash@loremcompany.com. 
-      Please open it and click the button inside to confirm your subscription.</p>
-
-      <button>Dismiss message</button>
-
-      <!-- Success message end -->
+      </article>
     </main>
 
     <div class="attribution">
