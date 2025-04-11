@@ -65,11 +65,17 @@ form {
         "button button";
 
     input {
+        margin-top: $spacing-100;
         padding: $spacing-200 $spacing-300;
         border: 1px solid $grey;
         border-radius: $spacing-100;
         grid-area: input;
         color: $grey;
+
+        &:focus {
+            border-color: $blue-800;
+            color: $blue-800;
+        }
     }
 
     label {
@@ -96,6 +102,13 @@ form {
 
 .hidden {
     display: none;
+}
+
+.input--error {
+    border-color: $red;
+    color: $red;
+    background-color: $red-100;
+
 }
 
 .attribution { 
