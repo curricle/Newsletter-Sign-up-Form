@@ -1,0 +1,5 @@
+@mixin text-style($size: $spacing-200, $line-height: 100%, $font-weight: 700) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
