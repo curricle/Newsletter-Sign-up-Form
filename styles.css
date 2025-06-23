@@ -14,6 +14,19 @@ body {
   font-size: clamp(11.52px, 4vw, 16px);
   line-height: 150%;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+picture img {
+  border-radius: 16px;
+  width: 100%;
 }
 
 article {
@@ -107,4 +120,42 @@ form #email-error {
 }
 .attribution a {
   color: hsl(4, 100%, 67%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: hsl(234, 29%, 20%);
+  }
+  main {
+    border-radius: 32px;
+    padding: 40px;
+    margin: 80px;
+    gap: 40px;
+  }
+  article {
+    padding: 0;
+  }
+  picture {
+    border-radius: 8px;
+    width: 100%;
+    justify-self: center;
+  }
+  .attribution {
+    color: white;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  picture {
+    height: 100%;
+    width: auto;
+  }
 }/*# sourceMappingURL=styles.css.map */
