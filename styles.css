@@ -23,11 +23,10 @@ main {
 }
 
 picture img {
-  border-radius: 16px;
   width: 100%;
 }
 
-article {
+section {
   padding: 48px 24px;
   display: flex;
   flex-direction: column;
@@ -149,10 +148,14 @@ button {
   article {
     padding: 0;
   }
-  picture {
-    border-radius: 8px;
+  picture img {
+    border-radius: 16px;
     width: 100%;
     justify-self: center;
+  }
+  #article__success-message {
+    width: 504px;
+    height: 520px;
   }
   .attribution {
     color: white;
@@ -164,13 +167,11 @@ button {
     justify-content: center;
   }
   #article__form {
+    display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
     gap: 64px;
-  }
-  #article__success-message {
-    width: 504px;
+    align-items: center;
   }
   section {
     gap: 32px;
