@@ -159,11 +159,14 @@ form #email-error {
     align-items: center;
     justify-content: center;
   }
-  article {
+  #article__form {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap: 64px;
+  }
+  #article__success-message {
+    width: 504px;
   }
   section {
     gap: 32px;

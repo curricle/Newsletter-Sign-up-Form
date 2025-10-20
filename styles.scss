@@ -168,11 +168,14 @@ form {
         align-items: center;
         justify-content: center;
     }
-    article {
+    #article__form {
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
         gap: $spacing-800;
+    }
+    #article__success-message {
+        width: 504px;
     }
     section {
         gap: $spacing-400;
