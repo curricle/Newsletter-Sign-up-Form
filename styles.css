@@ -48,7 +48,7 @@ button {
   font-weight: 700;
 }
 button:hover {
-  background: linear-gradient(hsl(12, 100%, 61%), hsl(346, 100%, 66%));
+  background: linear-gradient(to left, hsl(12, 100%, 61%), hsl(346, 100%, 66%));
 }
 
 h1 {
