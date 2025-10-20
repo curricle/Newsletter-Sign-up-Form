@@ -84,6 +84,11 @@ form input:focus {
   border-color: hsl(234, 29%, 20%);
   color: hsl(234, 29%, 20%);
 }
+form input:invalid {
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: hsl(2, 100%, 95%);
+}
 form label {
   grid-area: label;
   justify-self: first baseline;
@@ -106,12 +111,6 @@ form #email-error {
 
 .hidden {
   display: none;
-}
-
-.input--error {
-  border-color: hsl(4, 100%, 67%);
-  color: hsl(4, 100%, 67%);
-  background-color: hsl(2, 100%, 95%);
 }
 
 .attribution {
