@@ -87,33 +87,37 @@ form input:focus {
   border-color: hsl(234, 29%, 20%);
   color: hsl(234, 29%, 20%);
 }
-form input:invalid {
-  border-color: hsl(4, 100%, 67%);
-  color: hsl(4, 100%, 67%);
-  background-color: hsl(2, 100%, 95%);
-}
-form input:invalidspan::after {
-  position: relative;
-  content: "Valid email required";
-}
-form label {
+
+label {
   grid-area: label;
   justify-self: first baseline;
   font-size: clamp(8.64px, 4vw, 12px);
   line-height: 150%;
   font-weight: 700;
 }
-form button {
+
+button {
   grid-area: button;
   margin-top: 24px;
 }
-form #email-error {
+
+#email-error {
   grid-area: error;
   font-size: clamp(8.64px, 4vw, 12px);
   line-height: 150%;
   font-weight: 700;
   text-align: right;
   color: hsl(4, 100%, 67%);
+}
+
+.invalid {
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: hsl(2, 100%, 95%);
+}
+.invalidspan::after {
+  position: relative;
+  content: "Valid email required";
 }
 
 #success-check {

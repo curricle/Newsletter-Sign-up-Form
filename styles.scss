@@ -92,14 +92,14 @@ form {
             border-color: $blue-800;
             color: $blue-800;
         }
-        &:invalid {
-            border-color: $red;
-            color: $red;
-            background-color: $red-100;
-            &span::after {
-                position: relative;
-                content: "Valid email required";
-            }
+        // &:invalid {
+        //     border-color: $red;
+        //     color: $red;
+        //     background-color: $red-100;
+        //     &span::after {
+        //         position: relative;
+        //         content: "Valid email required";
+        //     }
         }
     }
 
@@ -121,7 +121,15 @@ form {
         color: $red;
     }
 
-}
+    .invalid {
+        border-color: $red;
+        color: $red;
+        background-color: $red-100;
+        &span::after {
+            position: relative;
+            content: "Valid email required";
+        }
+    }
 
 #success-check {
     height: $spacing-800;
