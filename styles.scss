@@ -93,6 +93,10 @@ form {
             border-color: $red;
             color: $red;
             background-color: $red-100;
+            &span::after {
+                position: relative;
+                content: "Valid email required";
+            }
         }
     }
 
@@ -109,6 +113,9 @@ form {
 
     #email-error {
         grid-area: error;
+        @include text-style($size: 12px);
+        text-align: right;
+        color: $red;
     }
 
 }
