@@ -49,7 +49,7 @@ button {
   line-height: 150%;
   font-weight: 700;
 }
-button:hover {
+button:hover, button:active {
   background: linear-gradient(to left, hsl(12, 100%, 61%), hsl(346, 100%, 66%));
 }
 
@@ -173,6 +173,7 @@ button {
   body {
     align-items: center;
     justify-content: center;
+    height: 100vh;
   }
   main {
     margin: 32px;

@@ -49,7 +49,7 @@ button {
     color: $white;
     @include text-style($size: 12px, $line-height: 150%);
 
-    &:hover {
+    &:hover, &:active {
         background: $gradient-4;
     }
 }
@@ -186,6 +186,7 @@ form {
     body {
         align-items: center;
         justify-content: center;
+        height: 100vh;
     }
     main {
         margin: $spacing-400;
