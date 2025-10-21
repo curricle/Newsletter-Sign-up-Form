@@ -18,10 +18,12 @@ body {
     @include text-style($font-weight: 400);
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 main {
-    background: white;    
+    background: white;  
+    height: 100%;  
 }
 
 picture img {
@@ -48,6 +50,8 @@ button {
     border: none;
     color: $white;
     @include text-style($size: 12px, $line-height: 150%);
+    grid-area: button;
+    margin-top: $spacing-300;
 
     &:hover, &:active {
         background: $gradient-4;
@@ -96,48 +100,40 @@ form {
             border-color: $blue-800;
             color: $blue-800;
         }
-        // &:invalid {
-        //     border-color: $red;
-        //     color: $red;
-        //     background-color: $red-100;
-        //     &span::after {
-        //         position: relative;
-        //         content: "Valid email required";
-        //     }
-        }
     }
+}
 
-    label {
-        grid-area: label;
-        justify-self: first baseline;
-        @include text-style($size: 12px);
+label {
+    grid-area: label;
+    justify-self: first baseline;
+    @include text-style($size: 12px);
+}
+
+#email-error {
+    grid-area: error;
+    @include text-style($size: 12px);
+    text-align: right;
+    color: $red;
+}
+
+.invalid {
+    border-color: $red;
+    color: $red;
+    background-color: $red-100;
+    &span::after {
+        position: relative;
+        content: "Valid email required";
     }
-
-    button {
-        grid-area: button;
-        margin-top: $spacing-300;
-    }
-
-    #email-error {
-        grid-area: error;
-        @include text-style($size: 12px);
-        text-align: right;
-        color: $red;
-    }
-
-    .invalid {
-        border-color: $red;
-        color: $red;
-        background-color: $red-100;
-        &span::after {
-            position: relative;
-            content: "Valid email required";
-        }
-    }
-
+}
+#article__success-message, #article__success-message section {
+    height: 100%;
+}
 #success-check {
     height: $spacing-800;
     width: $spacing-800;
+}
+#dismiss {
+    margin-top: auto;
 }
 
 .hidden {
@@ -156,13 +152,15 @@ form {
 @media screen and (min-width: 768px) {
     body {
         background: $blue-800;
+        align-items: center; 
     }
     main {
         border-radius: $spacing-400;
         padding: $spacing-500;
         margin: 80px;
         display: flex;
-        justify-content: center;    
+        justify-content: center;   
+        height: auto;
     }
     article {
         padding: 0;
@@ -176,6 +174,12 @@ form {
         width: 504px;
         height: 520px;
         align-self: center;
+    }
+    #article__success-message section {
+        justify-content: center;
+    }
+    #dismiss {
+        margin-top: $spacing-300;
     }
     .attribution {
         color: white;
@@ -202,6 +206,9 @@ form {
         display: flex;
         flex-direction: column;
         width: auto;
+    }
+    #dismiss:hover {
+        box-shadow: 0px $spacing-200 $spacing-400 $red-50;
     }
     picture img {
         width: auto;

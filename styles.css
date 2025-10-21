@@ -16,10 +16,12 @@ body {
   font-weight: 400;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 main {
   background: white;
+  height: 100%;
 }
 
 picture img {
@@ -48,6 +50,8 @@ button {
   font-size: clamp(8.64px, 4vw, 12px);
   line-height: 150%;
   font-weight: 700;
+  grid-area: button;
+  margin-top: 24px;
 }
 button:hover, button:active {
   background: linear-gradient(to left, hsl(12, 100%, 61%), hsl(346, 100%, 66%));
@@ -100,11 +104,6 @@ label {
   font-weight: 700;
 }
 
-button {
-  grid-area: button;
-  margin-top: 24px;
-}
-
 #email-error {
   grid-area: error;
   font-size: clamp(8.64px, 4vw, 12px);
@@ -124,9 +123,17 @@ button {
   content: "Valid email required";
 }
 
+#article__success-message, #article__success-message section {
+  height: 100%;
+}
+
 #success-check {
   height: 64px;
   width: 64px;
+}
+
+#dismiss {
+  margin-top: auto;
 }
 
 .hidden {
@@ -144,6 +151,7 @@ button {
 @media screen and (min-width: 768px) {
   body {
     background: hsl(234, 29%, 20%);
+    align-items: center;
   }
   main {
     border-radius: 32px;
@@ -151,6 +159,7 @@ button {
     margin: 80px;
     display: flex;
     justify-content: center;
+    height: auto;
   }
   article {
     padding: 0;
@@ -164,6 +173,12 @@ button {
     width: 504px;
     height: 520px;
     align-self: center;
+  }
+  #article__success-message section {
+    justify-content: center;
+  }
+  #dismiss {
+    margin-top: 24px;
   }
   .attribution {
     color: white;
@@ -189,6 +204,9 @@ button {
     display: flex;
     flex-direction: column;
     width: auto;
+  }
+  #dismiss:hover {
+    box-shadow: 0px 16px 32px hsla(4, 100%, 67%, 0.5);
   }
   picture img {
     width: auto;
