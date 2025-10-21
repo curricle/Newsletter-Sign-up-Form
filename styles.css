@@ -26,6 +26,11 @@ picture img {
   width: 100%;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+}
+
 section {
   padding: 48px 24px;
   display: flex;
@@ -144,6 +149,8 @@ button {
     border-radius: 32px;
     padding: 40px;
     margin: 80px;
+    display: flex;
+    justify-content: center;
   }
   article {
     padding: 0;
@@ -156,6 +163,7 @@ button {
   #article__success-message {
     width: 504px;
     height: 520px;
+    align-self: center;
   }
   .attribution {
     color: white;
@@ -166,8 +174,10 @@ button {
     align-items: center;
     justify-content: center;
   }
+  main {
+    margin: 32px;
+  }
   #article__form {
-    display: flex;
     flex-direction: row-reverse;
     height: 100%;
     gap: 64px;
@@ -177,9 +187,9 @@ button {
     gap: 32px;
     display: flex;
     flex-direction: column;
+    width: auto;
   }
-  picture {
-    height: 100%;
+  picture img {
     width: auto;
   }
 }/*# sourceMappingURL=styles.css.map */
