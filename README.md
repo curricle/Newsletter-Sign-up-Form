@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/newsletter-sign-up-form-using-scss-DmxKEMeb-Y))
 - Live Site URL: [GitHub Pages](https://curricle.github.io/Newsletter-Sign-up-Form/)
 
 ## My process
